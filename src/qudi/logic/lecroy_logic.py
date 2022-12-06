@@ -71,7 +71,7 @@ class LecroyLogic(LogicBase):
     # configoptions
     _measurement_timing = ConfigOption('measurement_timing', default=100.)
     _channel = ConfigOption('channel', default='C1')
-    _channel_resolution = ConfigOption('channel_resolution', default = 1000)
+    _channel_resolution = ConfigOption('channel_resolution', default = 1000, missing = 'info')
     # signals
     sig_handle_timer = QtCore.Signal(bool)
     signal_plots_updated = QtCore.Signal()

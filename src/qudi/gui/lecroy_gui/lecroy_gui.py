@@ -12,24 +12,24 @@ from qudi.util.elecsus_plot import Elecsus
 
 
 
-class RbSpectrumMainWindow(QtWidgets.QMainWindow):
+class LeCroyMainWindow(QtWidgets.QMainWindow):
     """ Create the Main Window based on the *.ui file. """
 
     def __init__(self):
         # Get the path to the *.ui file
         this_dir = os.path.dirname(__file__)
-        ui_file = os.path.join(this_dir, 'ui_Rb_spectrum.ui')
+        ui_file = os.path.join(this_dir, 'ui_lecroy.ui')
 
         # Load it
-        super(RbSpectrumMainWindow, self).__init__()
+        super(LeCroyMainWindow, self).__init__()
         uic.loadUi(ui_file, self)
         self.show()
 
 
 
-class RbSpectrumGui(GuiBase):
+class LeCroyGui(GuiBase):
     """
-    Gui class for Rb spectrum in lecroy scope
+    Gui class for lecroy scope
 
         Example config for copy-paste:
 
@@ -76,7 +76,7 @@ class RbSpectrumGui(GuiBase):
         *.ui file and configures the event handling between the modules.
         Moreover it sets default values.
         """
-        self._mw = RbSpectrumMainWindow()
+        self._mw = LeCroyMainWindow()
 
         ###################################################################
         #               Configuring the dock widgets                      #
